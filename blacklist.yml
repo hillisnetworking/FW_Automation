@@ -8,8 +8,8 @@
         username: "{{mgmt_user}}"
         password: "{{mgmt_password}}"
         management: "{{mgmt_server}}"
+        domain: "{{mgmt_domain}}"
         fingerprint: "{{mgmt_finger_Print}}"
-        domain: "{{domain}}"
     register: login_response
   - name: "add host"    
     check_point_mgmt:
