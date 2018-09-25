@@ -1,0 +1,17 @@
+---
+- hosts: "localhost"
+  tasks:
+  - name: "login"
+    check_point_mgmt:
+      command: login
+      parameters:
+        username: "{{mgmt_user}}"
+        password: "{{mgmt_password}}"
+        management: "{{mgmt_server}}"
+        domain: "{{mgmt_domain}}"
+        fingerprint: "{{mgmt_finger_Print}}"
+    register: login_response
+- name: logout
+  check_point_mgmt:
+    command: logout
+    session-data: '{{login_response}}'
