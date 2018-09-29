@@ -10,9 +10,9 @@
         management: "{{mgmt_server}}"
       fingerprint: "{{mgmt_finger_Print}}"
     register: login_response
-  - name: "Publish"
-    command: mgmt publish
-    session-data: "{{login_response}}"
+#  - name: "Publish"
+#    command: mgmt publish
+#    session-data: "{{login_response}}"
 - name: "logout"
     check_point_mgmt:
       command: logout
