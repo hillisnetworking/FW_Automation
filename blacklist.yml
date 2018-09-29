@@ -9,14 +9,14 @@
         password: "{{mgmt_password}}"
         management: "{{mgmt_server}}"
         domain: "{{mgmt_domain}}"
-        fingerprint: "{{mgmt_finger_Print}}"
+      fingerprint: "{{mgmt_finger_Print}}"
     register: login_response
-  - name: "add host"    
+  - name: "add host"
     check_point_mgmt:
       command: add-host
       parameters:
         name: "Badguy-{{Badip}}"
-        ip-address: "{{Badip}}" 
+        ip-address: "{{Badip}}"
       session-data: "{{login_response}}"
   - name: "add new host new existing group"
     check_point_mgmt:
