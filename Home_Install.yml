@@ -17,7 +17,7 @@
       check_point_mgmt:
         command: install-policy
         parameters:
-          policy-package: standard
+          policy-package: FirstPolicy
         session-data: '{{login_response}}'
     - name: logout
       check_point_mgmt:
