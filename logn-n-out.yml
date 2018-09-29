@@ -9,7 +9,7 @@
         password: "{{mgmt_password}}"
         management: "{{mgmt_server}}"
         domain: "{{mgmt_domain}}"
-        fingerprint: "{{mgmt_finger_Print}}"
+      fingerprint: "{{mgmt_finger_Print}}"
     register: login_response
   - name: "logout"
     check_point_mgmt:
