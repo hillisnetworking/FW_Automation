@@ -12,7 +12,7 @@
     register: login_response
   - name: "Publish"
     mgmt publish
-    register: login_response
+    session-data: "{{login_response}}"
 - name: "logout"
     check_point_mgmt:
       command: logout
