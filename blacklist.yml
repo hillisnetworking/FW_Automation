@@ -27,3 +27,17 @@
           add:
           - "Badguy-{{Badip}}"
       session-data: "{{login_response}}"
+    - name: publish
+      check_point_mgmt:
+        command: publish
+        session-data: '{{login_response}}'
+    - name: install policy
+      check_point_mgmt:
+        command: install-policy
+        parameters:
+          policy-package: FirstPolicy
+        session-data: '{{login_response}}'
+    - name: logout
+      check_point_mgmt:
+        command: logout
+        session-data: '{{login_response}}'
